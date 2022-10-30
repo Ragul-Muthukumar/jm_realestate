@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin Login</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style1.css' %}">
+</head>
+<body>
+	<div class="hero">
+	<div class="form-box">
+			<h1 class="heading">Admin</h1>
+		<form id="login" class="input-group" action="/checkadminlogin" method="post">{% csrf_token %}
+			<input type="text" class="input-field" placeholder="User id" required name="adminid">
+			<input type="password" class="input-field" placeholder="Password" required name="adminpassword"><br><br>
+			<button type="submit" class="submit-btn">login</button>
+			{% if messages %}
+
+  			{% for msg in messages %}
+   			{{ msg }}
+  			{% endfor %}
+  
+  			{% endif %}
+		</form>
+	</div>
+    </div>
+</body>
+</html>

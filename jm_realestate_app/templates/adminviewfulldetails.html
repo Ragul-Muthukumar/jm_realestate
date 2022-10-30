@@ -1,0 +1,60 @@
+{% extends 'adminpage1.html' %}
+{% load static %}
+{% block body%}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+ 
+<div style="margin-left: 250px;width: 100%;">
+<br><br>
+
+<div class="fullpost">
+	<div class="fullpost-1stdiv"><br>
+		<h3 style="color: grey;"><i class="fa fa-inr" aria-hidden="true"></i><span style="color: red;font-size: 25px;"> {{ res2.price }}</span>,&ensp;&ensp; <i class="fa fa-inr" aria-hidden="true"></i> {{res2.squarefeet }} per sqft</h3>
+		<label style="color: green;">home or land for sale in {{ res2.area }},{{ res2.city}}.. near {{ res2.landmark }}</label><br><br>
+	<div style="display: flex;">
+		<div><img src="{{ res2.image.url }}"></div>
+		<div>
+			<div class="fullpost-insideview">
+			{% if res2.cat == 'House' %}
+			<label>{{ res2.totalsqft }}</label><label>sqft</label><label>|</label>
+			<i class="fa fa-bed"></i><label>{{ res2.bedroom }}</label><label>bedroom</label><label>|</label>
+			<i class="fa fa-shower"></i><label>{{ res2.bathroom }}</label><label>Bathroom</label>&ensp;&ensp;&ensp;
+			{% else %}
+      		<label>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;{{ res2.totalsqft }}</label>&ensp;<span>sqft</span><label>|</label>
+   			<label>{{res2.opensides}} sides open</label><br>
+    		{% endif %}
+			</div><br>
+			<div class="table-view">
+				<div style="display: grid;grid-template-columns: 1fr 1fr 1fr; text-align: center;">
+				<div><label style="color: grey;">Property Length</label><br><label style="font-size: 15px;"><b>{{res2.length}} ft</b></label></div>
+				<div><label style="color: grey;">Property Width</label><br><label style="font-size: 15px;"><b>{{res2.width}} ft</b></label></div>
+				<div><label style="color: grey;">Water</label><br><label style="font-size: 15px;"><b>{{res2.water}}</b></label></div></div>
+				<div style="display: grid;grid-template-columns: 1fr 1fr 1fr; text-align: center;padding-top: 20px;">
+				<div><label style="font-size: 18px;color: grey;">Road connection</label><br><label style="font-size: 15px;"><b>{{res2.road}} ft</b></label></div>
+				<div><label style="font-size: 18px;color: grey">Electricity</label><br><label style="font-size: 15px;"><b>{{res2.electricity}}</b></label></div>
+				<div><label style="font-size: 18px;color: grey;">Sewage connection</label><br><label style="font-size: 15px;"><b>{{res2.sewage}}</b></label></div>
+			</div>
+			</div><br>
+			<h5 style="margin-left: 70px;">Description : </h5>
+			<p style="margin-left: 80px;">{{res2.description}}</p>
+		</div>
+	</div>
+
+
+	</div><br>
+	<div class="fullpost-2nddiv"><br>
+		<center><h2>Buyer details</h2></center><br>
+		<label style="font-size: 20px;font-weight: bold;">Buyer name</label><br>
+		<label style="font-size: 20px;color: red;">{{ res.username}}</label><br><br>
+		<label style="font-size: 20px;font-weight: bold;">buyer Email Id</label><br>
+		<label style="font-size: 20px;color: red;">{{ res.emailid}}</label><br><br>
+		<label style="font-size: 20px;font-weight: bold;">buyer Mobile Number</label><br>
+		<label style="font-size: 20px;color: red;">{{ res.mobilenumber}}</label>
+	</div>
+</div><br><br>
+
+
+
+</div>
+
+
+{% endblock %}

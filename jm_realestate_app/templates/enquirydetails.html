@@ -1,0 +1,29 @@
+{% extends 'adminpage1.html' %}
+{% load static %}
+{% block body %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style1.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+	<div style="margin-left: 250px;">
+	<div class="adminpage-dashboard" style="height: 180PX;">
+			<div class="adminpage-heading-nav">
+				<h5 class="adminpage-heading-nav-h51">DASHBOARD</h5>
+				<h5 class="adminpage-heading-nav-h52">WELCOME ADMIN</h5>
+			</div>
+			<h2 class="admin-panel">Enquires</h2>
+		</div>
+</div>
+<!-- <div class="order-detail">
+	<h1>Notifications</h1>
+	<div class="order-detail-1stdiv">
+		{% for res in res %}
+		<div class="order-detail-div">
+		<label class="order-detail-1stdiv-label">{{res.emailid}} wants to buy a property from us<a href="/adminviewfulldetails/{{res.id}}" style="margin-left: 50px;text-decoration: underline;">view details</a></label>
+		</div>
+		{% endfor %}
+	</div>
+	
+</div> -->
+
+
+{% endblock %}

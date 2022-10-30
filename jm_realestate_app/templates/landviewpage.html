@@ -1,0 +1,73 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block body %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+<div style="background-color:#f0f4fa;"><br><div class="searchview">
+<center><form>
+	<input type="" name="">&ensp;<button><i class="fa fa-search"></i></button>
+</form></center>
+</div><br>
+
+
+<div class="homepost1">
+<div class="homepost">
+  <div class="homepost-image"><img src="{% static 'images/pic5.jpg' %}"></div>
+  <div class="homepage-post"><label class="label">{{ res1}} for sale near {{ res.area }} in {{ res.city }}...</label><br>
+    <label>near {{ res.landmark }}</label><br>
+    <label class="label1">&#x20B9;</label><span class="span1"> {{ res.price}}</span>&ensp;&ensp;<span>&#x20B9; 3000 per sqft...</span><br>
+    <label>{{ res.totalsqft }}</label>&ensp;<span>sqft</span><label>|</label>
+    <label>1 sides open</label><br>
+    <button>View Details</button><button>Contact Owner</button>
+  </div>
+
+
+
+
+</div>
+<center><div class="contact-us">
+          <div>
+         <table>
+              <tr><th>Company</th></tr>
+              <tr><td>About</td></tr>
+              <tr><td>Jobs</td></tr>
+              <tr><td>Press</td></tr>
+              <tr><td>Blog</td></tr>
+              <tr><td>Help</td></tr>
+              <tr><td>Policies</td></tr>
+              <tr><td>Terms & Privacy</td></tr>
+         </table>
+         </div>
+
+         <div>
+
+         <table>
+              <tr><th>Discover</th></tr>
+              <tr><td>Became a Member</td></tr>
+              <tr><td>Property List</td></tr>
+              <tr><td>Sign in</td></tr>
+              <tr><td>Widgets</td></tr>
+              <tr><td>Components</td></tr>
+              <tr><td>Tables</td></tr>
+              <tr><td>Lists</td></tr>
+         </table>
+           </div>
+           <div>
+                <h1>JM RealEstate</h1>
+                <h3><i class="fa fa-map-marker" aria-hidden="true"></i>&ensp;&ensp;Address</h3>
+                <p> 5/149 Vallar st,sri nagar,<br> 
+                picham palayam pudur,<br>
+                Tiruppur - 641603</p><br>
+                <h3><i class="fa fa-phone" aria-hidden="true"></i>&ensp;&ensp;Let's Talk</h3>
+                <h4>+91 9994717735</h4><br>
+                
+           </div>
+
+
+
+     </div></center>
+     <div class="social-media">
+     <center><i class="fa fa-facebook-official"></i><i class="fa fa-instagram"></i><i class="fa fa-twitter-square"></i><i class="fa fa-linkedin-square"></i><i class="fa fa-google-plus-official"></i>
+     <h5>RealEstate Web Application</h5></div></center>
+     <center><h5><i class="fa fa-copyright" aria-hidden="true"></i>2022</h5></center>
+
+{% endblock %}

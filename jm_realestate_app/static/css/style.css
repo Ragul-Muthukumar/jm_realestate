@@ -1,0 +1,862 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+	font-family: 'poppins',sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+}
+.nav-nav{
+	display: flex;
+	justify-content: space-between;
+	background-color: rgb(2, 156, 7,.1);
+	padding-bottom: 20px;
+
+
+}
+.navbar {
+  overflow: hidden;
+ 
+  
+}
+
+.navbar a {
+  float: left;
+  font-size: 17px;
+  color: white;
+  text-align: center;
+  padding: 14px 48px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+.realestate{
+	list-style-type: none;
+	font-size: 30px;
+	padding-top: 15px;
+	margin-left: 50px;
+}
+.realestate a{
+	text-decoration: none;
+	color: #029c07;
+	
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  color: green;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.search h1{
+	font-weight: bolder;
+	font-size: 60px;
+}
+.search h3{
+	font-weight: bolder;
+	font-size: 25px;
+}
+
+.search input{
+	font-size: 25px;
+	
+
+
+}
+.search input[type=text]{
+	border:3px solid #aaa;
+	border-top-left-radius: 40px;
+	border-bottom-left-radius: 40px;
+	border-top-right-radius: 40px;
+	border-bottom-right-radius: 40px;
+	margin: 8px 0;
+	outline: none;
+	padding: 25px 30px;
+	width:50%;
+	box-sizing: border-box;
+	transition: .3s;
+
+
+}
+.search input[type=text]:focus{
+	border-color: dodgerblue;
+	box-shadow: 0 0 8px 0 dodgerblue;
+}
+.search i{
+	border:3px solid #aaa;
+	border-top-right-radius: 40px;
+	border-bottom-right-radius: 40px;
+	margin: 14px 0;
+	outline: none;
+	padding: 20px 10px;
+	width:3%;
+	box-sizing: border-box;
+	transition: .3s;
+	padding-bottom:10px;
+	margin-left: -55px;
+	background-color: white;
+	border:none;
+	font-size: 30px;
+	padding-right: 30px;
+	color: green;
+}
+/*.search button i{
+	font-size: 33px;
+	margin-left:-100px;
+}*/
+/*i{
+	
+	width: 100px;
+	font-size: 100px;
+	margin-left: 100px;
+	border-left: 2px solid grey;
+	cursor: pointer;
+	padding-top: 15px;
+	padding-bottom:15px;
+
+}*/
+/*login-design*/
+.hero{
+	height: 90vh;
+	width: 100%;
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+	background-image: url("/static/images/pic2.jpg" );
+	background-size: 1400px 600px;
+}
+.form-box{
+	width: 380px;
+	height: 480px;
+	position: relative;
+	margin: 6px auto;
+	background-color: white;
+	padding: 5px;
+	overflow: hidden;
+}
+.button-box{
+	width: 220px;
+	margin: 35px auto;
+	position: relative;
+	box-shadow: 0 0 3px 2px #b9fac3;
+	border-radius: 30px;
+}
+.toggle-btn{
+	padding: 10px 30px;
+	cursor: pointer;
+	background:transparent;
+	border:0;
+	outline: none;
+	position: relative;
+}
+#btn{
+	top: 0;
+	top: 0;
+	position: absolute;
+	width: 110px;
+	height: 100%;
+	background-color: #029c07;
+	border-radius: 30px;
+	transition: .5s;
+}
+.input-group{
+	top: 130px;
+	position: absolute;
+	width: 280px;
+	transition: .5s;
+}
+.input-field{
+	width: 100%;
+	padding: 10px 0;
+	margin: 5px	0;
+	border-left: 0;
+	border-top: 0;
+	border-right: 0;
+	border-bottom: 1px solid #999;
+	outline: none;
+	background:transparent;
+}
+.input-field:focus{
+	border-bottom: 1px solid dodgerblue;
+	border-color: dodgerblue;
+}
+.submit-btn{
+	width: 85%;
+	padding: 10px 30px;
+	cursor: pointer;
+	display: block;
+	margin: auto;
+	background-color: #029c07;
+	border:0;
+	outline: none;
+	border-radius: 30px;
+}
+.submit-btn:hover{
+	box-shadow: 0 0 3px 2px #4efc68;
+}
+
+#login{
+	left: 50px;
+}
+#register{
+	left: 450px;
+}
+/*homepagecard design*/
+.homecard-div{
+	width: 400px;
+	height: 500px;
+	border:1px solid #9da19e;
+	box-shadow:0 0 5px 3px #9da19e; 
+
+}
+.homecard-div a{
+	list-style-type: none;
+	text-decoration: none;
+	color: green;
+}
+.homecard-div:hover a{
+	color: white;
+}
+.homecard-div:hover{
+	box-shadow:0 0 8px 5px #9da19e;
+	transform: scale(1.01); 
+}
+.homecard-div:hover button{
+	background-color:#029c07;
+	color: white;
+	border:none;
+}
+.three-div{
+	display: grid;
+	padding-bottom: 30px;
+	grid-template-columns:1fr 1fr 1fr;
+	margin-left: 3%;
+}
+.three-div img{
+	margin-top: 25px;
+	height: 200px;
+	width: 300px;
+}
+.three-div button{
+	padding:10px 40px;
+	margin-top: 40px;
+	color: #029c07;
+	cursor: pointer;
+}
+.three-div p{
+	margin-left: 20px;
+	margin-right: 30px;
+	margin-top: 30px;
+
+}
+.main-homecard1 {
+	display: grid;
+	grid-template-columns:1fr 1fr 1fr 1fr;
+	margin-left: 3%;
+}
+.homecard1-div{
+	border-radius: 10px;
+	width: 300px;
+	height: 400px;
+	box-shadow: 0 0 5px 3px #9da19e;
+}
+.homecard1-div h2,h6,h3,label{
+	margin-left: 20px;
+}
+.homecard1-div:hover{
+	box-shadow: 0 0 8px 5px #9da19e;
+}
+.homecard1-div img{
+	border-radius: 10px;
+	width: 300px;
+	height: 200px;
+}
+.homecard1-div button{
+	margin-top: 15px;
+	padding: 10px 30px;
+	background-color:#029c07;
+	border:0.1px solid #9da19e;
+	color: white;
+}
+.homecard1-div button:hover{
+	background-color: #0c850e;
+}
+.homecard1-div h2{
+	color: red;
+	font-size: 30px;
+}
+.aboutpage {
+	display: flex;
+	justify-content: space-around;
+
+}
+.aboutpage p{
+	width: 700px;
+}
+.aboutpage img{
+	width: 500px;
+	height: 700px;
+}
+.contact-us {
+	width: 100%;
+	height: 45vh;
+	background-color:white;
+	border-top: 1px solid black;
+	width: 80%;
+}
+.message input{
+	padding: 15px 300px 15px 30px;
+}
+.message textarea{
+	padding: 15px 310px 100px 40px;
+}
+.message button{
+	margin-top: 10px;
+	padding: 10px 50px;
+	background-color: #029c07;
+	border:none;
+	color: white;
+}
+.message button:hover{
+	background-color:#0c850e;
+}
+.message input:focus,textarea:focus{
+	border-color: dodgerblue;
+	box-shadow: 0 0 3px 1px dodgerblue;
+	outline: none;
+}
+.message button:hover{
+	border-color: dodgerblue;
+	box-shadow: 0 0 8px 0 dodgerblue;
+}
+.contact-us{
+	display: flex;
+	justify-content: space-between;
+	padding-top: 40px;
+
+}
+.contact-us th,td{
+	margin-left: 50px;
+	text-align: center;
+}
+.contact-us h1{
+	color: #029c07;
+	font-size: 40px;
+}
+.contact-us p,h4{
+	margin-left: 20px;
+}
+.social-media i{
+	font-size: 30px;
+	margin-left: 15px;
+	cursor: pointer;
+}
+.social-media i:hover{
+	transform: scale(1.1);
+}
+.sellerlogin1{
+	background-image: url("/static/images/pic9.jpg");
+	
+
+}
+.sellerlogin{
+	width: 400px;
+	height: 400px;
+	padding-top: 50px;
+	margin-left: 30rem;
+	box-shadow: 0 0 5px 3px grey;
+
+}
+.sellerlogin input{
+	padding: 2px 50px;
+	margin-left: 50px;
+
+}
+.sellerlogin h5{
+	margin-left: 30px;
+}
+.sellerlogin input:focus{
+	outline: none;
+	border-color: dodgerblue;
+	box-shadow: 0 0 5px 0 dodgerblue;
+}
+.sellerlogin button{
+	padding: 10px 50px;
+	background-color: #029c07;
+	color: white;
+	border:none;
+}
+.sellerlogin label{
+	color: grey;
+
+}
+.sellerlogin h1{
+	color: green;
+}
+.sellerlogin button:hover{
+	background-color: green;
+}
+.sellersignup{
+	width: 400px;
+	height: 500px;
+	padding-top: 5px;
+	margin-left: 30rem;
+	box-shadow: 0 0 5px 3px grey;
+
+}
+.sellersignup input{
+	padding: 2px 50px;
+	margin-left: 50px;
+
+}
+.sellersignup h5{
+	margin-left: 30px;
+}
+.sellersignup input:focus{
+	outline: none;
+	border-color: dodgerblue;
+	box-shadow: 0 0 5px 0 dodgerblue;
+}
+.sellersignup button{
+	padding: 10px 50px;
+	background-color: #029c07;
+	color: white;
+	border:none;
+}
+.sellersignup label{
+	color: grey;
+
+}
+.sellersignup h1{
+	color: green;
+}
+.sellersignup button:hover{
+	background-color: green;
+}
+.sellingpost{
+	margin-left: 250px;
+	background-color: white;
+	width: 80%;
+	height: 280vh;
+	border: 10px solid green;
+}
+.sellingpost input{
+	border-left: 0;
+	border-right: 0;
+	border-top: 0;
+	border-bottom: 1px solid grey;
+	background: none;
+	padding-right: 100px;
+}
+.sellingpost input:focus{
+	outline: none;
+}
+.sellingpost select{
+	padding: 5px 100px;
+}
+.sellingpost select:focus{
+	outline: none;
+}
+.sellingpost button{
+	padding: 10px 50px;
+	color: white;
+	font-size: 20px;
+	border: none;
+	background-color:#029c07;
+}
+.sellingpost button:hover{
+	background-color: green;
+}
+.postproperty{
+	margin-left: 100px;
+}
+.searchview{
+	padding-bottom: 20px;
+	margin-left: 20px;
+}
+.searchview input[type=text]{
+	padding: 8px 15px;
+	width: 60%;
+	font-size: 15px;
+	border-radius: 5px;
+	border: 1px solid grey;
+
+}
+.searchview button{
+	padding: 11px 15px;
+	background-color: #029c07;
+	border: 10px solid red;
+	color: white;
+	border:none;
+	border-radius: 5px;
+	cursor: pointer;
+
+}
+.searchview button:hover{
+	background-color: green;
+	transition: .5s;
+}
+.searchview input:focus{
+	outline: none;
+	border: 1px solid dodgerblue;
+	box-shadow: 0 0 3px 1px dodgerblue;
+
+}
+
+.homepost1{
+	border-bottom: 1px solid grey;
+	width: 80%;
+	margin-left: 10%;
+	height: 220px;
+
+}
+.homepost{
+	background-color: white;
+	width: 100%;
+	height:190px;	
+	display: grid;
+	grid-template-columns: 1fr 2fr 0.7fr;
+	border:1px solid grey;
+	box-shadow: 0 0 5px 2px grey;
+	
+}
+.homepost:hover{
+	box-shadow: 0 0 8px 3px grey;
+}
+.homepost img{
+	margin-top: 12px;
+	margin-left: 15px;
+	width: 250px;
+	height: 160px;
+	border-radius: 10px;
+	outline: 1px solid black;
+}
+.homepost-image {
+	
+	border-right: 1px solid grey;
+	
+}
+.label{
+	font-size: 20px;
+
+}
+.span1{
+	font-size: 40px;
+
+
+}
+.label1{
+	margin-bottom: 10px;
+	font-size: 20px;
+}
+.homepage-post1 a{
+	list-style-type: none;
+	text-decoration: none;
+	color: #029c07;
+}
+.homepage-post1 a:hover{
+	color: white;
+	background-color:#029c07; 
+}
+.homepage-post1{
+	border-left: 1px solid grey;
+}
+.homepage-post1 button{
+	margin-top: 30px; 
+	padding: 3px 10px;
+	margin-left: 5px;
+	border-radius: 20px;
+	background-color:white;
+	border:2px solid green;
+	color: #029c07;
+	font-size: 20px;
+	
+}
+
+.homepage-post1 button:hover{
+	background-color:#029c07;
+	
+}
+.homepage-post1 button:hover a{
+	color: white;
+}
+.homepage-post2{
+	border-left: 1px solid grey;
+}
+.homepage-post2 button{
+	margin-top: 15px; 
+	padding: 3px 10px;
+	margin-left: 5px;
+	border-radius: 20px;
+	background-color:white;
+	border:2px solid green;
+	color: #029c07;
+	font-size: 15px;
+	
+}
+.homepage-post2 button a{
+	list-style-type: none;
+	text-decoration: none;
+	color: green;
+}
+.homepage-post2 button:hover{
+	background-color:#029c07;
+	color:white;
+}
+.edit-delete{
+	padding: 5px 10px;
+	margin-left: 50px;
+	margin-top: 40px;
+	background-color: red;
+	border: none;
+	color: white;
+}
+.edit-delete:hover{
+	background-color: #a3030e;
+}
+
+
+.fullpost{
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	column-gap: 10px;
+	width: 95%;
+	margin-left: 30px;
+}
+.fullpost-1stdiv{
+	height: 500px;
+	border: 1px solid grey;
+	border-radius: 10px;
+	background-color: white;
+
+}
+.fullpost-2nddiv{
+	
+	border: 1px solid grey;
+	border-radius: 10px;
+	background-color: white;
+}
+.fullpost-1stdiv label{
+	font-size: 20px;
+}
+.fullpost-1stdiv img{
+	margin-left: 20px;
+	width: 250px;
+	height: 150px;
+	outline: 1px solid grey;
+	border-radius: 5px;
+}
+.fullpost-insideview{
+	background-color: #a80c0c;
+	border-radius: 10px;
+	margin-top: 5px; 
+	margin-left: 50px;
+	padding:8px 0;
+	color: white;
+	font-size: 13px;
+}
+.table-view{
+	margin-left: 20px;
+	padding-left: 20px;
+}
+
+.fullpost-2nddiv input{
+	margin-left: 50px;
+	padding-right: 40px;
+	border-right: none;
+	border-left: none;
+	border-top: none;
+	border-bottom: 1px solid black;
+}
+.fullpost-2nddiv input:focus{
+	outline: none;
+}
+.fullpost-2nddiv button{
+	margin-left: 75px;
+	padding: 10px 20px;
+	border: 1px solid green;
+	border-radius: 10px;
+	background-color: white;
+	color: green;
+	font-size: 15px;
+	cursor: pointer;
+}
+.fullpost-2nddiv button:hover{
+	background-color: green;
+	color: white;
+}
+.fullpost-2nddiv h2{
+	color: green;
+}
+.reports{
+	margin-left: 220px;
+	padding-top: 10px;
+}
+.post-div{
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	margin-top: 10px;
+	margin-left: 20px;
+	width: 950px;
+	height: 200px;
+	border-radius: 5px;
+	box-shadow: 0 0 2px 2px grey;
+	background-color: white;
+}
+.post-div:hover{
+	box-shadow: 0 0 5px 3px grey;
+}
+.post-1div img{
+	padding-top: 20px;
+	margin-left: 20px;
+	border-radius: 5px;
+	width: 250px;
+	height: 180px;
+}
+.post-2div{
+	border-right: 1px solid grey;
+}
+.post-2div h6,label{
+	padding-top: 20px;
+	font-size: 18px;
+	font-family: 'Quicksand', sans-serif;
+
+}
+.post-22div{
+	margin-left: 20px;
+	margin-top: 10px;
+	padding-left: 20px;
+	margin-right: 150px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #a80c0c;
+	border-radius: 10px;
+	color: white;
+}
+.post-23div h6,label{
+	font-size: 15px;
+}
+.post-3div{
+	padding-top: 20px;
+	margin-left: 40px;
+}
+.post-3div button{
+	margin-top: 20px;
+	font-size: 15px;
+	padding: 4px 35px;
+	border-radius: 20px;
+	border: 1px solid green;
+	cursor: pointer;
+}
+.button1 a{
+	color: white;
+}
+.button2 a{
+	color: #029c07; 
+}
+.button1{
+	background-color:#029c07;
+	color: white;
+
+}
+.button2{
+	background-color: white;
+	color:#029c07; 
+}
+.post-3div button a{
+	text-decoration: none;
+	list-style-type: none;
+}
+.button1:hover{
+	background-color: green;
+	transition: .5s;
+
+}
+.button2:hover{
+	background-color: #029c07;
+	transition: .5s;
+	color: white;
+	
+}
+.button2:hover a{
+	color: white;
+}
+.add-postpage{
+	margin-left: 20px;
+	width: 300px;
+	height: 100vh;
+	border: 1px solid lightgrey;
+	border-radius: 5px;
+	background-color: white;
+}
+
+
+/*post property design*/
+
+.tdlabel{
+	width: 30%;
+	font-size: 1.3rem;
+	text-align: left;
+	padding: 0 0 0 2rem;	
+}
+.tdinput .tdinput1{
+	padding: 0 400px 0 0;
+	font-size: 1.3rem;
+	border: groove;
+	border-radius: 5px;
+	
+}
+.tdbutton{
+	padding: 1rem 2rem;
+	border-radius: 10px;
+	border: none;
+	color: white;
+	background-color: green;
+	font-size: 1.2rem;
+	cursor: pointer;
+}
+.tdbutton:hover{
+	background-color: darkgreen;
+}
+.tdinput .tdinput1:focus{
+	outline: none;
+	border: 2px solid dodgerblue;
+}

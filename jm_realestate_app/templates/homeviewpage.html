@@ -1,0 +1,195 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/pic16.png' %}">
+  <title></title>
+</head>
+<body>
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/hompagedesign.css' %}">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div style="display: flex;justify-content: space-around;background-color: rgb(0, 0, 0,.8);">
+<div class="jmrealestate"><a href="">JM REALESTATE</a></div>
+<div class="navbar">
+  <a href="/">Home</a>
+  
+  <div class="dropdown">
+    <button class="dropbtn">Properties&ensp;
+      <i class="fa fa-angle-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="/homeviewpage">Buy House</a>
+      <a href="/landviewpage">Buy Land</a>
+     
+    </div>
+  </div> 
+  <a href="#about">About</a>
+  <a href="#about">Contact</a>
+  {% if 'user' in request.session %}
+        <div class="dropdown">
+              
+               <button class="dropbtn">hi {{ user }}&ensp;<i class="fa fa-angle-down"></i></button>
+            
+               <div class="dropdown-content">
+                    <a href="/homeviewpage">My post</a>
+                    <a href="{% url 'logout' %}">Logout</a>
+               </div>
+          </div>
+        
+        {% else %}
+             
+          
+               <a href="/userlogin">Login</a> 
+        {% endif %}
+  
+</div>
+</div>
+{% block body %}
+<div style="background-color:#f0f4fa;"><br><div class="searchview">
+<form action="/searchbox" method="post">{% csrf_token %}
+  <input type="text" name="search" placeholder="Search-Area | City | State| pincode">&ensp;<button type="submit"><i class="fa fa-search"></i></button>
+
+</form>
+</div>
+<div style="display: grid;grid-template-columns: 2fr 1fr;">
+<div style="border-right: 1px solid lightgrey; width: 1000px;">
+{% for res in res %}
+<div class="post-div">
+  <div class="post-1div"><img src="{{ res.image.url }}"></div>
+  <div class="post-2div">
+    <div class="post-21div">
+      {% if res.cat == "House" %}
+      <h6>Home For Sale In {{res.area}} {{res.city}}</h6>
+      {% else %}
+      <h6>Plot or Land For Sale In {{res.area}} {{res.city}}</h6>
+      {% endif %}
+      <label style="text-decoration: underline;">Near {{res.landmark}}</label>
+    </div>
+    <div class="post-22div">
+      {% if res1 == 'Home' %}
+      <label>{{res.totalsqft}}</label>&ensp;<span>sqft</span><label>|</label>
+    <label>{{res.bedroom}}</label>&ensp;<i class="fa fa-bed"></i><label>|</label>
+    <label>{{res.bathroom}}</label>&ensp;<i class="fa fa-shower"></i><br>
+      {% else %}
+      <label>{{ res.totalsqft }}</label>&ensp;<span>sqft</span><label>|</label>
+    <label>{{res.opensides}} sides open</label><br>
+    {% endif %}
+    </div>
+    <div class="post-23div">
+      <h6>Description:</h6>
+      <label>{{res.description}}</label>
+    </div>
+  </div>
+  <div class="post-3div">
+    <div>
+      <h6 style="font-size: 25px;font-family: 'Quicksand', sans-serif;"><i class="fa fa-inr" aria-hidden="true"></i> {{res.price}}</h6>
+      <label style="font-size: 13px;margin-left: 30px;"><i class="fa fa-inr" aria-hidden="true"></i> {{res.squarefeet}} per sqft</label>
+
+    </div>
+    <div>
+      <button class="button1"><a href="/postfullview/{{res.id}}">View Details</a></button><br>
+      <button class="button2"><a href="/postfullview/{{res.id}}">Buy Property</a></button>
+    </div>
+  </div>
+</div><br>
+{% endfor %}
+
+<label style="margin-left: 100px; font-size:30px;color: lightgrey; ">Search results for "{{ res4}}"</label>
+{% for res in res3 %}
+<div class="post-div">
+  <div class="post-1div"><img src="{{ res.image.url }}"></div>
+  <div class="post-2div">
+    <div class="post-21div">
+      {% if res.cat == "House" %}
+      <h6>Home For Sale In {{res.area}} {{res.city}}</h6>
+      {% else %}
+      <h6>Plot or Land For Sale In {{res.area}} {{res.city}}</h6>
+      {% endif %}
+      <label style="text-decoration: underline;">Near {{res.landmark}}</label>
+    </div>
+    <div class="post-22div">
+      {% if res.cat == 'House' %}
+      <label>{{res.totalsqft}}</label>&ensp;<span>sqft</span><label>|</label>
+    <label>{{res.bedroom}}</label>&ensp;<i class="fa fa-bed"></i><label>|</label>
+    <label>{{res.bathroom}}</label>&ensp;<i class="fa fa-shower"></i><br>
+      {% else %}
+      <label>{{ res.totalsqft }}</label>&ensp;<span>sqft</span><label>|</label>
+    <label>{{res.opensides}} sides open</label><br>
+    {% endif %}
+    </div>
+    <div class="post-23div">
+      <h6>Description:</h6>
+      <label>{{res.description}}</label>
+    </div>
+  </div>
+  <div class="post-3div">
+    <div>
+      <h6 style="font-size: 25px;font-family: 'Quicksand', sans-serif;"><i class="fa fa-inr" aria-hidden="true"></i> {{res.price}}</h6>
+      <label style="font-size: 13px;margin-left: 30px;"><i class="fa fa-inr" aria-hidden="true"></i> {{res.squarefeet}} per sqft</label>
+
+    </div>
+    <div>
+      <button class="button1"><a href="/postfullview/{{res.id}}">View Details</a></button><br>
+      <button class="button2"><a href="/postfullview/{{res.id}}">Buy Property</a></button>
+    </div>
+  </div>
+</div><br>
+{% endfor %}
+</div>
+<div class="add-postpage">
+  <div style="margin-left: 10px;margin-top: 10px;margin-right: 10px;padding-bottom: 20px;background-color: #facae8;padding-top: 20px;"><p style="font-size: 25px; text-align: center;padding-left: 10px;margin-left: 10px;margin-right: 10px;">Buy Land or Home from us for good price</p></div>
+  <div><img src="{%static 'images/pic10.jpg' %}" style="width: 279px;margin-left: 10px;margin-top: 10px;"></div>
+</div>
+</div>
+</div>
+
+<center><div class="contact-us">
+          <div>
+         <table>
+              <tr><th>Company</th></tr>
+              <tr><td>About</td></tr>
+              <tr><td>Jobs</td></tr>
+              <tr><td>Press</td></tr>
+              <tr><td>Blog</td></tr>
+              <tr><td>Help</td></tr>
+              <tr><td>Policies</td></tr>
+              <tr><td>Terms & Privacy</td></tr>
+         </table>
+         </div>
+
+         <div>
+
+         <table>
+              <tr><th>Discover</th></tr>
+              <tr><td>Became a Member</td></tr>
+              <tr><td>Property List</td></tr>
+              <tr><td>Sign in</td></tr>
+              <tr><td>Widgets</td></tr>
+              <tr><td>Components</td></tr>
+              <tr><td>Tables</td></tr>
+              <tr><td>Lists</td></tr>
+         </table>
+           </div>
+           <div>
+                <h1>JM RealEstate</h1>
+                <h3><i class="fa fa-map-marker" aria-hidden="true"></i>&ensp;&ensp;Address</h3>
+                <p> 5/149 Vallar st,sri nagar,<br> 
+                picham palayam pudur,<br>
+                Tiruppur - 641603</p><br>
+                <h3><i class="fa fa-phone" aria-hidden="true"></i>&ensp;&ensp;Let's Talk</h3>
+                <h4>+91 9994717735</h4><br>
+                
+           </div>
+
+
+
+     </div></center>
+     <div class="social-media">
+     <center><i class="fa fa-facebook-official"></i><i class="fa fa-instagram"></i><i class="fa fa-twitter-square"></i><i class="fa fa-linkedin-square"></i><i class="fa fa-google-plus-official"></i>
+     <h5>RealEstate Web Application</h5></div></center>
+     <center><h5><i class="fa fa-copyright" aria-hidden="true"></i>2022</h5></center>
+    {% endblock %} 
+</body>
+</html>

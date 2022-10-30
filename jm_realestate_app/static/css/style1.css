@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+	font-family:'poppins',sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style-type: none;
+	
+
+}
+.hero{
+	height: 100%;
+	width: 100%;
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+	background-image: url("/static/images/pic2.jpg" );
+}
+.form-box{
+	width: 380px;
+	height: 480px;
+	position: relative;
+	margin: 6px auto;
+	background-color: white;
+	padding: 5px;
+	overflow: hidden;
+}
+.input-group{
+	top: 180px;
+	position: absolute;
+	width: 280px;
+	transition: .5s;
+}
+.input-field{
+	width: 100%;
+	padding: 10px 0;
+	margin: 5px	0;
+	border-left: 0;
+	border-top: 0;
+	border-right: 0;
+	border-bottom: 1px solid #999;
+	outline: none;
+	background:transparent;
+}
+.input-field:focus{
+	border-bottom: 1px solid dodgerblue;
+	border-color: dodgerblue;
+}
+.submit-btn{
+	width: 85%;
+	padding: 10px 30px;
+	cursor: pointer;
+	display: block;
+	margin: 30px auto;
+	background-color: #029c07;
+	border:0;
+	outline: none;
+	border-radius: 30px;
+}
+.submit-btn:hover{
+	box-shadow: 0 0 3px 2px #4efc68;
+}
+
+#login{
+	left: 50px;
+}
+.heading{
+	width: 120px;
+	margin: 100px auto;
+	position: relative;
+	box-shadow: 0 0 3px 2px #b9fac3;
+	border-radius:30px;
+	background-color: #029c07;
+	text-align: center;
+
+}
+/*adminpage design*/
+.admin-sidebar{
+	width: 17%;
+	margin-top: 5px;
+	margin-left: 10px;
+	height: 96vh;
+	border-radius: 10px;
+	background-color: white;
+	position: fixed;
+	
+}
+.admin-profile{
+	padding-bottom: 10px;
+	border-bottom: 2px solid #f5fcfc;
+	background-color: green;
+	border-radius: 5px;
+}
+
+.admin-profile label{
+	top: 0;
+	font-size: 28px;
+	margin-left: 10px;
+	color:white;
+	font-family: 'Quicksand', sans-serif;
+}
+.side-navbar label{
+	color: grey;	
+	font-family: 'Quicksand', sans-serif;
+	margin-left: 20px;
+	font-size: 1rem;
+}
+.side-navbar li{
+	padding-left: 45px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #353236;
+	font-size: 15px;
+	
+
+}
+.side-navbar a{
+	color: black;
+
+}
+
+.side-navbar li:hover{
+	color: white;
+	background-color:#766180; 
+	border-radius: 10px;
+}
+/*adminpage1 design*/
+.adminpage-design{
+	margin-left: 18.5%;
+	position: relative;
+
+
+}
+.adminpage-dashboard{
+	width: 100%;
+	height: 250px;
+	background-color: #766180;
+
+}
+.adminpage-heading-nav{
+	width: 100%;
+	height:60px; 
+	border-bottom: 1px solid white; 
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.adminpage-heading-nav-h51{
+	font-size: 25px;
+	color: white;
+	padding-left: 10px;
+
+}
+.adminpage-heading-nav-h52{
+	font-size: 20px;
+	color: white;
+	padding-right: 20px;
+
+}
+.admin-panel{
+	text-align: center;
+	font-size: 30px;
+	padding-top: 1rem;
+	color: white;
+}
+.admindashboard-content-cards1{
+	width: 210px;
+	height: 420px;
+	left: 60px;
+	top: 30px;
+	background-color: red;
+	position: relative;
+	border-radius: 5px;
+}
+.admindashboard-content-cards2{
+	width: 220px;
+	height: 400px;
+	left: 20px;
+	background-color: white;
+	position: absolute;
+	top: 0;
+	border-radius: 5px;
+}
+.admindashboard-totalcards{
+	width: 100%;
+	position: absolute;
+	top: 150px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	right: 10px;
+
+
+
+}
+
+
+
+
+
+
+
+.order-detail{
+	padding-left: 250px;
+}
+.order-detail-1stdiv{
+	margin-top: 25px;
+	margin-left: 50px;
+	border-radius: 20px;
+	width: 900px;
+	
+	background-color:#C0F0F0;
+}
+.order-detail-div:hover{
+	background-color: white;
+}
+.order-detail-1stdiv-label{
+	
+	margin-left: 70px;
+	font-size: 20px;
+	
+}
+.order-detail-div{
+	padding-top: 15px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid grey;
+}
+

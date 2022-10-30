@@ -1,0 +1,144 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/pic16.png' %}">
+  <title>JM REALESTATE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/hompagedesign.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+</head>
+<body>
+  <div class="homepage" style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.7)),url('static/images/pic11.jpg'); background-size: 100%; height: 550px;">
+<div style="display: flex;justify-content: space-around;background-color: rgb(0, 0, 0,.4);"
+>
+<div class="jmrealestate"><a href="">JM REALESTATE</a></div>
+<div class="navbar">
+  <a href="/">Home</a>
+  
+  <div class="dropdown" >
+    <button class="dropbtn">Properties&ensp;
+      <i class="fa fa-angle-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="/homeviewpage">Buy House</a>
+      <a href="/landviewpage">Buy Land</a>
+     
+    </div>
+  </div> 
+  <a href="#about">About</a>
+  <a href="#about">Contact</a>
+  {% if 'user' in request.session %}
+        <div class="dropdown">
+              
+               <button class="dropbtn">hi {{ user }}&ensp;<i class="fa fa-angle-down"></i></button>
+            
+               <div class="dropdown-content">
+                    <a href="/homeviewpage">My post</a>
+                    <a href="{% url 'logout' %}">Logout</a>
+               </div>
+          </div>
+        
+        {% else %}
+               <a href="/userlogin">Login</a> 
+        {% endif %}
+  
+</div>
+</div>
+<div class="headinglines" >
+<h1>To each their ground.℠</h1>
+<h1>Let's find a ground that's perfect for you</h1>
+</div>
+<div class="searchbar">
+  <form action="/searchbox" method="post">{% csrf_token %}
+  <input type="text" name="search" placeholder="Search-Area | City | State| pincode"><button><i class="fa fa-search"></i></button>
+</form>
+</div>
+</div>
+<div style="display: grid;">
+  <div class="secondpart1">
+    <img src="{%static 'images/pic12.jpg' %}">
+  </div>
+  <div class="secondpart2">
+    <div class="secondpart21"></div>
+    <div class="secondpart22">
+      <h1>WELCOME TO OUR WEBSITE</h1>
+
+<p>We specialize in buying and selling homes throughout Orange County California.<br><br>
+
+If you are new to the area or you've been here some time, we want to thank you for stopping by. We work with all communities throughout Orange County and would love to spend some time with you to find the perfect place to live.<br><br>
+
+Real estate is one of the largest and most exciting investments one can make. We am here to make sure that your process is a fun and rewarding one! Our website is geared toward our local areas of Newport Beach, and Corona Del Mar, and also surrounding communities such as Dana Point, Laguna Niguel, and more!<br><br>
+
+We are specialists in our community and we would be happy to help you with all of your real estate needs!<br><br>
+Thanks again for stopping by!</p></div>
+  </div>
+</div>
+<div class="landorome" style="margin-top: 50px;">
+  <span class="landorhome1">What are you looking for ?...</span>
+  <div class="landorome2">
+    <div class="homecard-div">
+          <center><img src="{%static 'images/pic14.jpg' %}"></center>
+          <center><h2>Buy a home</h2></center>
+          <p>Find your place with an immersive photo experience and the most listings, including things you won’t find anywhere else.</p>
+          <center><button><a href="/homeviewpage"> Browse Home</a></button></center>
+     </div>
+
+    <div class="homecard-div">
+          <center><img src="{%static 'images/pic13.jpg' %}"></center>
+          <center><h2>Buy a Land</h2></center>
+          <p>Your next place is closer than you think. Explore the possibilities, and discover a land you’ll love.</p>
+          <center><button><a href="/landviewpage"> Browse Land</a></button></center>
+     </div>
+</div><br><br>
+<center><div class="contact-us">
+          <div>
+         <table>
+              <tr><th>Company</th></tr>
+              <tr><td>About</td></tr>
+              <tr><td>Jobs</td></tr>
+              <tr><td>Press</td></tr>
+              <tr><td>Blog</td></tr>
+              <tr><td>Help</td></tr>
+              <tr><td>Policies</td></tr>
+              <tr><td>Terms & Privacy</td></tr>
+         </table>
+         </div>
+
+         <div>
+
+         <table>
+              <tr><th>Discover</th></tr>
+              <tr><td>Became a Member</td></tr>
+              <tr><td>Property List</td></tr>
+              <tr><td>Sign in</td></tr>
+              <tr><td>Widgets</td></tr>
+              <tr><td>Components</td></tr>
+              <tr><td>Tables</td></tr>
+              <tr><td>Lists</td></tr>
+         </table>
+           </div>
+           <div>
+                <h1>JM RealEstate</h1>
+                <h3><i class="fa fa-map-marker" aria-hidden="true"></i>&ensp;&ensp;Address</h3>
+                <p> 5/149 Vallar st,sri nagar,<br> 
+                picham palayam pudur,<br>
+                Tiruppur - 641603</p><br>
+                <h3><i class="fa fa-phone" aria-hidden="true"></i>&ensp;&ensp;Let's Talk</h3>
+                <h4>+91 9994717735</h4><br>
+                
+           </div>
+
+
+
+     </div></center>
+     <div class="social-media">
+     <center><i class="fa fa-facebook-official"></i><i class="fa fa-instagram"></i><i class="fa fa-twitter-square"></i><i class="fa fa-linkedin-square"></i><i class="fa fa-google-plus-official"></i>
+     <h5>RealEstate Web Application</h5></div></center>
+     <center><h5><i class="fa fa-copyright" aria-hidden="true"></i>2022</h5></center>
+
+
+</body>
+</html>

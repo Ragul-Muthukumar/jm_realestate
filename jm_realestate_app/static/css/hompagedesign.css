@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Raleway",sans-serif;
+	
+}
+.jmrealestate{
+	font-size: 25px;
+	margin-top: 10px;
+}
+.jmrealestate a{
+	list-style-type: none;
+	text-decoration: none;
+	color:white;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  overflow: hidden;
+  
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color:rgb(250,250,250,0.8);
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 60px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: rgb(250,250,250,0.8);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 60px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  color:rgb(250,250,250); 
+
+
+}
+.dropdown:hover .dropbtn i{
+transform: translateX(10px);
+transition: .2s;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(0,0,0,0.6);
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 15px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  
+}
+
+.dropdown-content a:hover {
+  background-color: rgb(250,250,250,.7);
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.searchbar{
+	margin-left: 22%;
+	margin-top: 50px;
+	height: 70px;
+	width: 750px;
+	border-radius:10px; 
+	background-color:rgb(0,0,0,0.5);
+}
+.headinglines{
+	margin-top: 50px;
+	text-align: center;
+}
+.headinglines h1,h3{
+	color:rgb(250,250,250,0.9);
+}
+.searchbar input{
+	font-size: 20px;
+	width: 630px;
+	height:50px;
+	margin-top: 10px;
+	margin-left: 10px;
+	background-color: rgb(250,250,250,.8);
+
+}
+.searchbar input:focus{
+	outline: none;
+}
+
+.searchbar button{
+	margin-left: 5px;
+	font-size: 20px;
+	height: 50px;
+	width: 95px;
+	color: white;
+	background-color: #029c07;
+	border: none;
+	cursor: pointer;
+	
+}
+.searchbar button:hover{
+	background-color: green;
+	transition: 1s;
+}
+.secondpart1{
+	position: absolute;
+	width: 47%;
+	height: 525px;
+	background-color:#029c07;
+	
+}
+.secondpart1 img{
+	margin-top: 60px;
+	margin-left:130px;
+	width: 100%;
+	height: 70%;
+}
+.secondpart2{
+	color: white;
+	margin-left: 47%;
+	width: 53%;
+	height: 525px;
+	background-color: rgb(0,0,0);
+}
+.secondpart21{
+	width: 100%;
+	height: 60px;
+	background-color: white;
+}
+.secondpart22 h1,p{
+	font-family: "Raleway",sans-serif;
+	margin-left: 150px;
+
+}
+.secondpart22 h1{
+	padding-bottom: 8px;
+	font-family: "Raleway",sans-serif;
+	font-size: 30px;
+	margin-top: 22px;
+}
+.secondpart22 p{
+	font-family: "Raleway",sans-serif;
+	margin-top: 10px;
+	font-size: 17px;
+	margin-right: 40px;
+}
+.landorhome{
+	margin-top: 10px;
+}
+.landorhome1{
+	font-family: "Raleway",sans-serif;
+	margin-left: 450px;
+	padding: 10px 30px;
+	font-size: 30px;
+	font-weight: bold;
+
+}
+.landorome2{
+	
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin-left: 100px;
+	margin-top: 50px;
+}
+.homecard-div{
+	width: 520px;
+	height: 520px;
+	border:1px solid #9da19e;
+	box-shadow:0 0 5px 3px #9da19e; 
+
+}
+.homecard-div a{
+	list-style-type: none;
+	text-decoration: none;
+	color: green;
+}
+.homecard-div:hover a{
+	color: white;
+}
+.homecard-div:hover{
+	box-shadow:0 0 8px 5px #9da19e;
+	transform: scale(1.01); 
+	transition: .5s;
+}
+.homecard-div:hover button{
+	background-color:#029c07;
+	transition: .5s;
+	color: white;
+	border:none;
+}
+.homecard-div img{
+	margin-top: 25px;
+	height: 300px;
+	width: 450px;
+}
+.homecard-div button{
+	padding:5px 20px;
+	margin-top: 30px;
+	font-size: 20px;
+	color: #029c07;
+	cursor: pointer;
+}
+.homecard-div p{
+	margin-left: 20px;
+	margin-right: 30px;
+	margin-top: 30px;
+}
+.contact-us{
+	border-top:1px solid black; 
+	display: flex;
+	justify-content: space-around;
+	padding-top: 40px;
+
+}
+.contact-us th,td{
+	margin-left: 50px;
+	text-align: center;
+}
+.contact-us h1{
+	color: #029c07;
+	font-size: 40px;
+}
+.contact-us p,h4{
+	margin-left: 20px;
+}
+.social-media i{
+	font-size: 30px;
+	margin-left: 15px;
+	cursor: pointer;
+}
+.social-media i:hover{
+	transform: scale(1.1);
+}

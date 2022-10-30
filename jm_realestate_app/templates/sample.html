@@ -1,0 +1,127 @@
+{% extends 'adminpage1.html' %}
+{% load static %}
+{% block body %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+<div style="background-image: linear-gradient(#81D357,#61EAA0)"><div class="sellingpost">
+	
+	<form  method="post" enctype="multipart/form-data" action="/property">
+		{% csrf_token %}
+		<center><h1>Post Property</h1></center><br>
+		
+		<h1>Property Locations</h1><br>
+		<label>City</label>&emsp;&emsp;&emsp;&emsp;
+		<input type="text" name="city" required>&emsp;&emsp;&emsp;&emsp;
+		<label>Area</label>&emsp;
+		<input type="text" name="area" required><br><br><br>
+		<label>LandMark</label>&emsp;
+		<input type="text" name="landmark" required><br><br>
+		<h1>Property Area</h1>
+		<label>Length</label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+		<input type="text" name="length" required><label>ft</label>&emsp;&emsp;&emsp;&emsp;
+		<label>width</label>&emsp;
+		<input type="text" name="width" required><label>ft</label><br><br><br>
+		<label>Total Squarefeet</label>&emsp;
+		<input type="text" name="totalsqft" required><label>sq ft</label><br><br>
+		<h1>About Property</h1><br>
+		<label>Description</label>&emsp;&emsp;
+		<textarea name="description" ></textarea><br><br>
+		<h1>Price</h1>
+		&emsp;&emsp;<input type="text" name="price" required><br><br>
+		<h1>Property Image</h1><br>
+		<label>Image</label>&emsp;&emsp;
+		<input type="file" name="image" id="file" required><br><br>
+		<h1>Property Type</h1><br>
+		<label>Select</label>&emsp;&emsp;
+		<select id="selector" onchange="homeorland(this);" name="cat" required>
+			<option value=" ">__Select__</option>
+			<option value="House">House</option>
+			<option value="Empty Land">Empty Land</option>
+		</select><br><br>
+		
+		<div id="home" style="display: none;">
+			<h1>Details about home</h1><br>
+			<label>Bedrooms</label>&emsp;
+			<input type="text" name="bedroom">
+			<label>Bathrooms</label>&emsp;
+			<input type="text" name="bathroom">
+		</div>
+		<div id="land" style="display: none;">
+			<h1>Details about land</h1><br>
+			<label>No of open sides</label>&emsp;
+			<input type="text" name="opensides">
+		</div><br><br>
+		<h1>Civic Infrastructure Details</h1><br>
+		<label>Water Connections</label>&emsp;&emsp;&emsp;&emsp;&emsp;
+		<select name="water">
+			<option value=" ">__Select__</option>
+			<option value="No WaterConnection">No WaterConnection</option>
+			<option value="Borewell">Borewell</option>
+			<option value="Lorry Water">Lorry Water</option>
+			<option value="Government Water">Government Water</option>
+		</select><br><br>
+		<label>Electricity Connections</label>&emsp;&emsp;&ensp;&ensp;&ensp;
+		<select name="electricity">
+			<option value=" ">__Select__</option>
+			<option value="No Electricity Connections">No Electricity Connections</option>
+			<option value="Government Electricity">Government electricity</option>
+			<option value="Solar Power">Solar Power</option>
+		</select><br><br>
+		<label>Sewage Connections</label>&emsp;&emsp;&emsp;&emsp;
+		<select name="sewage">
+			<option value=" ">__Select__</option>
+			<option value="No Drainage">No Drainage</option>
+			<option value="Open Drainage">Open Drainage</option>
+			<option value="Closed Drainage">Closed</option>
+		</select><br><br>
+		<label>Road Available</label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+		<input type="" name="road"><label>Feet Road</label><br><br><br>
+		<center><button type="submit">Post Property</button></center>
+	</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<script type="text/javascript">
+			function homeorland(that){
+				if (that.value == "House") 
+   			{
+       			 document.getElementById("home").style.display = "block";
+    		}
+    		else
+    		{
+       			 document.getElementById("home").style.display = "none";
+    		}
+    			if (that.value == "Empty Land") 
+   			{
+       			 document.getElementById("land").style.display = "block";
+    		}
+    		else
+    		{
+       			 document.getElementById("land").style.display = "none";
+    		}
+		}
+		</script>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+{% endblock %}

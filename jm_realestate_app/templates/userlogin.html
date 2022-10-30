@@ -1,0 +1,66 @@
+{% extends 'homeviewpage.html' %}
+{% load static %}
+{% block body %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+
+<div class="hero">
+	<div class="form-box">
+		<div class="button-box">
+			<div id="btn"></div>
+			<button type="button" class="toggle-btn" onclick="login()">Log In</button>
+			<button type="button" class="toggle-btn" onclick="register()">Register</button>
+			</div>
+		<form id="login" class="input-group" method="post" action="/checklogin">
+			{% csrf_token %}
+			<input type="email" class="input-field" placeholder="Email Id" required name="emailid">
+			<input type="password" class="input-field" placeholder="Password" required name="password"><br><br>
+			{% if messages %}
+
+  			{% for msg in messages %}
+   			{{ msg }}
+  			{% endfor %}
+  
+  			{% endif %}
+			<button type="submit" class="submit-btn">login</button>
+			
+		</form>
+
+		<form id="register" class="input-group" method="post" action="/storeuser">
+			{% csrf_token %}
+			<input type="text" class="input-field" placeholder="User Name" required name="username">
+			<input type="text" class="input-field" placeholder="Mobile Number" required name="mobilenumber">
+			<input type="email" class="input-field" placeholder="Email id" required name="emailid">
+			<input type="password" class="input-field" placeholder="Enter Password" required name="password">
+			<input type="password" class="input-field" placeholder="Re-Enter Password" required name="password2"><br><br>
+			<button type="submit" class="submit-btn">Register</button>
+			
+		</form>
+
+
+	</div>
+	
+</div>
+<script type="text/javascript">
+	var x = document.getElementById("login");
+	var y = document.getElementById("register");
+	var z = document.getElementById("btn");
+
+	function register(){
+		x.style.left="-400px";
+		y.style.left="50px";
+		z.style.left="110px";
+	}
+	function login(){
+		x.style.left="50px";
+		y.style.left="450px";
+		z.style.left="0";
+	}
+
+
+
+
+</script>
+
+
+{% endblock %}

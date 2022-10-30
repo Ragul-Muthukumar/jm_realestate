@@ -1,0 +1,124 @@
+{% extends 'adminpage1.html' %}
+{% load static %}
+{% block body %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+<div class="adminpage-design">
+<div class="adminpage-dashboard" style="height: 150px;">
+			<div class="adminpage-heading-nav">
+				<h5 class="adminpage-heading-nav-h51">DASHBOARD</h5>
+				<h5 class="adminpage-heading-nav-h52">WELCOME ADMIN</h5>
+			</div>
+			<h2 class="admin-panel">Post Property</h2>
+		</div><br>
+	<form  method="post" enctype="multipart/form-data" action="/property">
+		{% csrf_token %}
+
+		<table style="border-collapse: separate;border-spacing: 0 1em;">
+			<tr>
+				
+				<td class="tdlabel">Product ID</td>
+				<td class="tdinput"><input type="text" name="p_id" required class="tdinput1"></td>
+			</tr>
+			<tr>
+				<td class="tdlabel">City</td>
+				<td class="tdinput"><input type="text" name="city" required class="tdinput1"></td>
+			</tr>
+			<tr>
+				<td class="tdlabel">Area</td>
+				<td class="tdinput"><input type="text" name="area" required class="tdinput1"></td>
+			</tr>
+			<tr>
+				<td class="tdlabel">Land Mark</td>
+				<td class="tdinput"><input type="text" name="landmark" required class="tdinput1"></td>
+			</tr>
+			<tr>
+				<td class="tdlabel">Length</td>
+				<td class="tdinput"><input type="text" name="length" required class="tdinput1"></td>
+			</tr>
+			<tr>
+				<td class="tdlabel">Width</td>
+				<td class="tdinput"><input type="text" name="width" required class="tdinput1"></td>
+			</tr>
+			<tr>
+				<td class="tdlabel">Square Feet</td>
+				<td class="tdinput"><input type="text" name="totalsqft" required class="tdinput1"></td>
+			</tr>
+			<tr>
+				<td class="tdlabel">Property Image</td>
+				<td class="tdinput12"><input type="file" name="image" required class="tdinput12" style="float: left;cursor: pointer;"></td>
+			</tr>
+			<tr>
+				<td class="tdlabel">Description</td>
+				<td class="tdinput"><textarea style="float: left;width: 60%;padding-bottom: 20%;border: groove;border-radius: 5px;" name="description"></textarea></td>
+			</tr>
+			<tr>
+				<td class="tdlabel">Price</td>
+				<td class="tdinput"><input type="text" name="price" required class="tdinput1"></td>
+			</tr>
+			<tr>
+				<td class="tdlabel">Categery</td>
+				<td class="tdinput"><select name="cat" required class="tdinput1" style="float: left;">
+			<option value=" ">__Select__</option>
+			<option value="House">House</option>
+			<option value="Empty Land">Empty Land</option>
+		</select></td>
+			</tr>
+			<tr>
+				<td class="tdlabel">Bed Room</td>
+				<td class="tdinput"><input type="text" name="bedroom" class="tdinput1"></td>
+			</tr>
+			<tr>
+				<td class="tdlabel">Bath Room</td>
+				<td class="tdinput"><input type="text" name="bathroom" class="tdinput1"></td>
+			</tr>
+			<tr>
+				<td class="tdlabel">Open Sides</td>
+				<td class="tdinput"><input type="text" name="opensides" class="tdinput1"></td>
+			</tr>
+			<tr>
+				<td class="tdlabel">Water Connection</td>
+				<td class="tdinput"><select name="water" required class="tdinput1" style="float: left;">
+			<option value=" ">__Select__</option>
+			<option value="No Connection">No Connection</option>
+			<option value="Borewell">Borewell</option>
+			<option value="Government Water">Government Water</option>
+			<option value="Lorry Water">Lorry Water</option>
+		</select>
+		</td>
+		</tr>
+		<tr>
+				<td class="tdlabel">Electricity Connections</td>
+				<td class="tdinput"><select name="electricity" required class="tdinput1" style="float: left;">
+			<option value=" ">__Select__</option>
+			<option value="No Electricity">No Electricity</option>
+			<option value="Government Electricity">Government Electricity</option>
+			<option value="Solar Power">Solar Power</option>
+		</select>
+		</td>
+		</tr>
+		<tr>
+				<td class="tdlabel">Sewage Connection</td>
+				<td class="tdinput"><select name="sewage" required class="tdinput1" style="float: left;">
+			<option value=" ">__Select__</option>
+			<option value="Open">Open</option>
+			<option value="Close">Close</option>
+			<option value="No Sewage">No Sewage</option>
+			
+		</select>
+		</td>
+		</tr>
+		<tr>
+				<td class="tdlabel">Road</td>
+				<td class="tdinput"><input type="text" name="road" required class="tdinput1"></td>
+			</tr>
+		</table><br>
+		<center><button type="submit" class="tdbutton">Post Property</button></center><br><br><br><br><br>
+
+
+
+
+
+</form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/pic16.png' %}">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style1.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+</head>
+<body style="background-color: #E1D1F0;">
+	<div class="admin-sidebar">
+	<div class="admin-profile"><br>
+		<label>JM REALESTATE</label>
+	</div>
+	<div class="side-navbar">
+		<nav>
+			<ul><label>MAIN-ADMINPAGE</label>
+				<a href="/adminpage1"><li><i class="fa fa-home" aria-hidden="true"></i>&ensp;Dashboard&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<i class="fa fa-angle-right" aria-hidden="true"></i></li></a>
+				<label>DETAILS</label>
+				<a href="/userdetails"><li><i class="fa fa-user" aria-hidden="true"></i>&ensp; User Detail &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<i class="fa fa-angle-right" aria-hidden="true"></i></li></a>
+				<a href="/enquirydetails"><li><i class="fa fa-handshake-o" aria-hidden="true"></i> Enquiry Detail &ensp;&ensp;&ensp;&ensp;&ensp; <i class="fa fa-angle-right" aria-hidden="true"></i></li></a>
+				<label>Property</label>
+				<a href="/viewproperty"><li><i class="fa fa-building-o" aria-hidden="true"></i> View Property&ensp;&ensp;&ensp;&ensp;&ensp;<i class="fa fa-angle-right" aria-hidden="true"></i></li></a>
+				<a href="/postproperty"><li><i class="fa fa-envelope" aria-hidden="true"></i> Post Property&ensp;&ensp;&ensp;&ensp;&ensp;<i class="fa fa-angle-right" aria-hidden="true"></i></li></a>
+				<label>GENERAL</label>
+				<a href="/getreports"><li><i class="fa fa-bar-chart" aria-hidden="true"></i> Reports&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<i class="fa fa-angle-right" aria-hidden="true"></i></li></a>
+				<a href="/adminlogout"><li><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</li></a>
+			</ul>
+		</nav>
+		
+	</div>
+	</div>
+	{% block body %}
+	
+		<div class="adminpage-design">
+		<div class="adminpage-dashboard">
+			<div class="adminpage-heading-nav">
+				<h5 class="adminpage-heading-nav-h51">DASHBOARD</h5>
+				<h5 class="adminpage-heading-nav-h52">WELCOME ADMIN</h5>
+			</div>
+			<h2 class="admin-panel">ADMIN PANEL</h2>
+		</div>
+		
+		<div class="admindashboard-totalcards">
+			<div>
+				<div class="admindashboard-content-cards1" style="background-image: linear-gradient(to bottom, #f9c361, #fab054, #fa9c4a, #f98745, #f77143);"></div>
+				<div class="admindashboard-content-cards2"></div>
+			</div>
+
+			<div>
+				<div class="admindashboard-content-cards1" style="background-image: linear-gradient(to bottom, #c7a7ec, #b89fe2, #a997d8, #9a8fce, #8c87c4);" ></div>
+				<div class="admindashboard-content-cards2" style="left: 300px;"></div>
+			</div>
+
+			<div>
+				<div class="admindashboard-content-cards1" style="background-image: linear-gradient(to bottom, #e8a7ec, #e698eb, #e388e9, #e178e7, #de66e5);"></div>
+				<div class="admindashboard-content-cards2" style="left: 580px;"></div>
+			</div>
+
+			<div>
+				<div class="admindashboard-content-cards1" style="background-image: linear-gradient(to bottom, #5db2ff, #4fa8fd, #419efa, #3394f7, #268af4);"></div>
+				<div class="admindashboard-content-cards2" style="left: 860px;"></div>
+			</div>
+
+
+
+		</div>
+
+
+	</div>
+	
+	
+	
+	{% endblock %}
+
+</body>
+</html>
